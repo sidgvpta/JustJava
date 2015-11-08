@@ -10,11 +10,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FFE0B2"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
     <!-- testing GitHub sync -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Toppings"
+        android:textAllCaps="true" />
+
+    <CheckBox
+        android:id="@+id/toppingsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="24dp"
+        android:text="@string/topping1"
+        android:textSize="16sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,8 +47,8 @@
             android:id="@+id/decrease"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="@string/minus"
-            android:onClick="decrement" />
+            android:onClick="decrement"
+            android:text="@string/minus" />
 
         <TextView
             android:id="@+id/quantity_text_view"
@@ -48,16 +64,16 @@
             android:id="@+id/increase"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="@string/plus"
-            android:onClick="increment" />
+            android:onClick="increment"
+            android:text="@string/plus" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/summary"
         android:textAllCaps="true" />
 
@@ -73,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/order"
-        android:onClick="submitOrder" />
+        android:onClick="submitOrder"
+        android:text="@string/order" />
 
 </LinearLayout>
