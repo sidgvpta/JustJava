@@ -34,9 +34,6 @@ public class MainActivity extends ActionBarActivity {
         int pricePerCoffee = 5;
         int priceOfWhippedCream = 1;
         int totalPrice = (pricePerCoffee * quantity);
-        if (isChecked() == true) {
-            totalPrice = totalPrice + (priceOfWhippedCream * quantity);
-        }
         return totalPrice;
     }
 
@@ -72,8 +69,8 @@ public class MainActivity extends ActionBarActivity {
     public String createOrderSummary(int price) {
         String summary;
         String whippedCream;
-
-        if (isChecked() == true) {
+        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.toppingsCheckBox);
+        if (whippedCreamCheckBox.isChecked() == true) {
             whippedCream = "yes";
         }
         else {
@@ -88,15 +85,4 @@ public class MainActivity extends ActionBarActivity {
         }
         return summary;
     }
-
-    private boolean isChecked() {
-        CheckBox whippedCream = (CheckBox) findViewById(R.id.toppingsCheckBox);
-        if (whippedCream.isChecked() == true) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
 }
