@@ -3,7 +3,6 @@ package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -32,11 +31,7 @@ public class MainActivity extends ActionBarActivity {
 
     private int calculatePrice() {
         int pricePerCoffee = 5;
-        int priceOfWhippedCream = 1;
         int totalPrice = (pricePerCoffee * quantity);
-        if (isChecked() == true) {
-            totalPrice = totalPrice + (priceOfWhippedCream * quantity);
-        }
         return totalPrice;
     }
 
@@ -71,53 +66,13 @@ public class MainActivity extends ActionBarActivity {
 
     public String createOrderSummary(int price) {
         String summary;
-        String whippedCream;
-<<<<<<< HEAD
-        String chocolate;
-        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.toppingsWhippedCream);
-        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.toppingsChocolate);
-        if (whippedCreamCheckBox.isChecked() == true) {
-=======
-
-        if (isChecked() == true) {
->>>>>>> parent of 4b888cf... Adding Scrolling Functionality
-            whippedCream = "yes";
-        }
-        else {
-            whippedCream = "no";
-        }
-
-        if (chocolateCheckBox.isChecked() == true) {
-            chocolate = "yes";
-        }
-        else {
-            chocolate = "no";
-        }
-
         if (quantity > 0) {
-            summary = "Name: Sid Gupta";
-            summary += ("\nQuantity: " + quantity);
-            summary += ("\nWhipped Cream?: " + whippedCream);
-            summary += ("\nChocolate?: " + chocolate);
-            summary += ("\nTotal: $" + price);
-            summary += "\nThank You!";
+            summary = ("Name: Sid Gupta" + "\nQuantity: " + quantity + "\nTotal: $" + price + "\nThank You!");
         }
         else {
-            summary = "Name: Sid Gupta";
-            summary += ("\nQuantity: " + quantity);
-            summary += ("\nTotal: $" + price);
+            summary = ("Name: Sid Gupta" + "\nQuantity: " + quantity + "\nTotal: $" + price);
         }
         return summary;
-    }
-
-    private boolean isChecked() {
-        CheckBox whippedCream = (CheckBox) findViewById(R.id.toppingsCheckBox);
-        if (whippedCream.isChecked() == true) {
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 
 }
