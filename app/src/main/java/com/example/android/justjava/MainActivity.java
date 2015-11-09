@@ -3,6 +3,8 @@ package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -10,6 +12,9 @@ import java.text.NumberFormat;
 /**
  * This app displays an order form to order coffee.
  */
+
+//Test Comment
+
 public class MainActivity extends ActionBarActivity {
 
     int quantity = 0;
@@ -26,7 +31,11 @@ public class MainActivity extends ActionBarActivity {
     public void submitOrder(View view) {
         /**int pricePerCoffee = 5;*/
         int price = calculatePrice();
-        displayMessage(createOrderSummary(price));
+
+        EditText name = (EditText) findViewById(R.id.enterName);
+        String userName = name.getText().toString();
+
+        displayMessage(createOrderSummary(price, userName));
     }
 
     private int calculatePrice() {
@@ -64,13 +73,39 @@ public class MainActivity extends ActionBarActivity {
         displayQuantity(quantity);
     }
 
-    public String createOrderSummary(int price) {
+    public String createOrderSummary(int price, String name) {
         String summary;
-        if (quantity > 0) {
-            summary = ("Name: Sid Gupta" + "\nQuantity: " + quantity + "\nTotal: $" + price + "\nThank You!");
+        String ynWhippedCream;
+        String ynChocolate;
+
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.whippedCream);
+        if (whippedCream.isChecked() == true) {
+            ynWhippedCream = "yes";
         }
         else {
-            summary = ("Name: Sid Gupta" + "\nQuantity: " + quantity + "\nTotal: $" + price);
+            ynWhippedCream = "no";
+        }
+
+        CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate);
+        if (chocolate.isChecked() == true) {
+            ynChocolate = "yes";
+        }
+        else {
+            ynChocolate = "no";
+        }
+
+        if (quantity > 0) {
+            summary = ("Name: " + name);
+            summary += ("\nQuantity: " + quantity);
+            summary += ("\nWhipped Cream?: " + ynWhippedCream);
+            summary += ("\nChocolate?: " + ynChocolate);
+            summary += ("\nTotal: $" + price);
+            summary += "\nThank You!";
+        }
+        else {
+            summary = ("Name: " + name);
+            summary += ("\nQuantity: " + quantity);
+            summary += ("\nTotal: $" + price);
         }
         return summary;
     }

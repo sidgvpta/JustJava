@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jar="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-a025d4129f35a193e91ec4721c382053ebe1b22a.jar" />
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/pre-dexed/debug/classes-bce45f7a40d399d1fc9bc575e84e8174d7bb7f5a.jar" />
     </item>
     <item
-        jar="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jar="/Users/sidgupta/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/classes-99649fe672b445bae918befa2d2243cdfe890ea5.jar" />
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-0ff28800b5695c081a451b3f61628ffcc57d48db.jar" />
     </item>
     <item
         jar="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
@@ -23,11 +23,46 @@
         <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/classes-e1d9fba926af3643e3424d9e1d8f0c0d71974aab.jar" />
     </item>
     <item
-        jar="/Users/sidgupta/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jar="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-0ff28800b5695c081a451b3f61628ffcc57d48db.jar" />
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/pre-dexed/debug/classes-f2eccfcdf86dd94dacfef019704fdb8c78b39d38.jar" />
+    </item>
+    <item
+        jar="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-a025d4129f35a193e91ec4721c382053ebe1b22a.jar" />
+    </item>
+    <item
+        jar="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/pre-dexed/debug/classes-070b8e84e43914d1e3e14a4b2e9c5095317d3c80.jar" />
+    </item>
+    <item
+        jar="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/pre-dexed/debug/classes-03f03d9108088c5ca8c0fae705f9d0c5a677596e.jar" />
+    </item>
+    <item
+        jar="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/GitHub/JustJavaRepo/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-3cd29a59f85cba87c520318fdb6e3d4467c9102b.jar" />
+    </item>
+    <item
+        jar="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/pre-dexed/debug/classes-99649fe672b445bae918befa2d2243cdfe890ea5.jar" />
     </item>
     <item
         jar="/Users/sidgupta/AndroidStudioProjects/JustJava/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
