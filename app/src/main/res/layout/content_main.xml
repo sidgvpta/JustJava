@@ -27,12 +27,20 @@
             android:textAllCaps="true" />
 
         <CheckBox
-            android:id="@+id/toppingsCheckBox"
+            android:id="@+id/toppingsWhippedCream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="@string/topping1"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/toppingsChocolate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:paddingLeft="24dp"
-            android:text="@string/topping1"
+            android:text="@string/topping2"
             android:textSize="16sp" />
 
         <TextView

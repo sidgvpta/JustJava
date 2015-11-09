@@ -69,7 +69,9 @@ public class MainActivity extends ActionBarActivity {
     public String createOrderSummary(int price) {
         String summary;
         String whippedCream;
-        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.toppingsCheckBox);
+        String chocolate;
+        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.toppingsWhippedCream);
+        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.toppingsChocolate);
         if (whippedCreamCheckBox.isChecked() == true) {
             whippedCream = "yes";
         }
@@ -77,11 +79,25 @@ public class MainActivity extends ActionBarActivity {
             whippedCream = "no";
         }
 
-        if (quantity > 0) {
-            summary = ("Name: Sid Gupta" + "\nQuantity: " + quantity + "\nWhipped Cream?: " + whippedCream + "\nTotal: $" + price + "\nThank You!");
+        if (chocolateCheckBox.isChecked() == true) {
+            chocolate = "yes";
         }
         else {
-            summary = ("Name: Sid Gupta" + "\nQuantity: " + quantity + "\nTotal: $" + price);
+            chocolate = "no";
+        }
+
+        if (quantity > 0) {
+            summary = "Name: Sid Gupta";
+            summary += ("\nQuantity: " + quantity);
+            summary += ("\nWhipped Cream?: " + whippedCream);
+            summary += ("\nChocolate?: " + chocolate);
+            summary += ("\nTotal: $" + price);
+            summary += "\nThank You!";
+        }
+        else {
+            summary = "Name: Sid Gupta";
+            summary += ("\nQuantity: " + quantity);
+            summary += ("\nTotal: $" + price);
         }
         return summary;
     }
