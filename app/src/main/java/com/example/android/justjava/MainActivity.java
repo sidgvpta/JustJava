@@ -34,6 +34,9 @@ public class MainActivity extends ActionBarActivity {
         int pricePerCoffee = 5;
         int priceOfWhippedCream = 1;
         int totalPrice = (pricePerCoffee * quantity);
+        if (isChecked() == true) {
+            totalPrice = totalPrice + (priceOfWhippedCream * quantity);
+        }
         return totalPrice;
     }
 
@@ -69,10 +72,15 @@ public class MainActivity extends ActionBarActivity {
     public String createOrderSummary(int price) {
         String summary;
         String whippedCream;
+<<<<<<< HEAD
         String chocolate;
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.toppingsWhippedCream);
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.toppingsChocolate);
         if (whippedCreamCheckBox.isChecked() == true) {
+=======
+
+        if (isChecked() == true) {
+>>>>>>> parent of 4b888cf... Adding Scrolling Functionality
             whippedCream = "yes";
         }
         else {
@@ -101,4 +109,15 @@ public class MainActivity extends ActionBarActivity {
         }
         return summary;
     }
+
+    private boolean isChecked() {
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.toppingsCheckBox);
+        if (whippedCream.isChecked() == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }
