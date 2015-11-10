@@ -1,5 +1,7 @@
 package com.example.android.justjava;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -36,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         EditText name = (EditText) findViewById(R.id.enterName);
         String userName = name.getText().toString();
 
-        displayMessage(createOrderSummary(price, userName));
+        sendOrder(userName, createOrderSummary(price, userName));
     }
 
     private int calculatePrice() {
@@ -67,9 +69,22 @@ public class MainActivity extends ActionBarActivity {
     /**
      * This method displays the given text on the screen.
      */
-    private void displayMessage(String message) {
+    private void sendOrder(String name, String message) {
+
+        Intent sendEmailSummmary = new Intent(Intent.ACTION_SENDTO);
+
+        sendEmailSummmary.setData(Uri.parse("mailto:")); // only email apps should handle this
+        sendEmailSummmary.putExtra(Intent.EXTRA_EMAIL, "guptas@tcd.ie");
+        sendEmailSummmary.putExtra(Intent.EXTRA_SUBJECT, ("JustJava Order- " + name));
+        sendEmailSummmary.putExtra(Intent.EXTRA_TEXT, message);
+        if (sendEmailSummmary.resolveActivity(getPackageManager()) != null) {
+            startActivity(sendEmailSummmary);
+        }
+
+        /*
         TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
         orderSummaryTextView.setText(message);
+        */
     }
 
     public void increment(View view) {
@@ -112,17 +127,17 @@ public class MainActivity extends ActionBarActivity {
         }
 
         if (quantity > 0) {
-            summary = ("Name: " + name);
-            summary += ("\nQuantity: " + quantity);
-            summary += ("\nWhipped Cream?: " + ynWhippedCream);
-            summary += ("\nChocolate?: " + ynChocolate);
-            summary += ("\nTotal: $" + price);
-            summary += "\nThank You!";
+            summary = (getString(R.string.userName) + name);
+            summary += ("\n" + getString(R.string.quantityOrdered) + quantity);
+            summary += ("\n"+ getString(R.string.hasWhippedCream) + ynWhippedCream);
+            summary += ("\n" + getString(R.string.hasChocolate) + ynChocolate);
+            summary += ("\n" + getString(R.string.total) + price);
+            summary += ("\n" + getString(R.string.thankYou));
         }
         else {
-            summary = ("Name: " + name);
-            summary += ("\nQuantity: " + quantity);
-            summary += ("\nTotal: $" + price);
+            summary = (getString(R.string.userName) + name);
+            summary += ("\n" + getString(R.string.quantityOrdered) + quantity);
+            summary += ("\n" + getString(R.string.total, NumberFormat.getCurrencyInstance().format(price)) + price);
         }
         return summary;
     }
